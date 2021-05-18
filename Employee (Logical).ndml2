@@ -1,0 +1,896 @@
+{
+  "paper": {
+    "name": "A4",
+    "leftMargin": 0.5,
+    "rightMargin": 0.5,
+    "topMargin": 0.5,
+    "bottomMargin": 0.5,
+    "isPortriat": true
+  },
+  "modelVersion": 2.01,
+  "defaultSchema": "Default",
+  "server": {
+    "objectType": "Server_LOGICAL",
+    "name": "Default",
+    "schemas": [
+      {
+        "objectType": "Schema_LOGICAL",
+        "name": "Default",
+        "tables": [
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Default.departments",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "depart_no",
+                "type": "CHARACTER",
+                "length": 4,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "depart_no"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "depart_name",
+                "type": "CHARACTER VARYING",
+                "length": 255,
+                "decimals": -1,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "depart_name"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "depart_no"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Default.view_1",
+            "comment": "",
+            "oldName": "",
+            "fields": [],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": []
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Default.titles",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "title_id",
+                "type": "CHARACTER",
+                "length": 10,
+                "decimals": -1,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "title_id"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "title",
+                "type": "CHARACTER VARYING",
+                "length": 255,
+                "decimals": -1,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "title"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Default.salaries",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "emp_no",
+                "type": "INTEGER",
+                "length": -1,
+                "decimals": -1,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "emp_no"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "salary",
+                "type": "CHARACTER VARYING",
+                "length": 10,
+                "decimals": 2,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "salary"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "emp_no"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": ".full_view",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "*",
+                "type": "",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "*"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "depart_name",
+                "type": "",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "depart_name"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "first_name",
+                "type": "",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "first_name"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "last_name",
+                "type": "",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "last_name"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": []
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Default.employees",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "emp_no",
+                "type": "NUMERIC",
+                "length": 10,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "emp_no"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "emp_title_id",
+                "type": "CHARACTER",
+                "length": 10,
+                "decimals": -1,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "emp_title_id"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "birth_date",
+                "type": "DATE",
+                "length": -1,
+                "decimals": -1,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "birth_date"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "first_name",
+                "type": "CHARACTER VARYING",
+                "length": 255,
+                "decimals": -1,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "first_name"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "last_name",
+                "type": "CHARACTER VARYING",
+                "length": 255,
+                "decimals": -1,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "last_name"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "sex",
+                "type": "CHARACTER VARYING",
+                "length": 1,
+                "decimals": -1,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "sex"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "hire_date",
+                "type": "DATE",
+                "length": -1,
+                "decimals": -1,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "hire_date"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "title",
+                "fields": [
+                  "emp_title_id"
+                ],
+                "referencedSchema": "Default",
+                "referencedTable": "Default.titles",
+                "referencedFields": [
+                  "title_id"
+                ],
+                "sourceCardinality": "OneOrManyRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": ""
+              },
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "Salary",
+                "fields": [
+                  "emp_no"
+                ],
+                "referencedSchema": "Default",
+                "referencedTable": "Default.salaries",
+                "referencedFields": [
+                  "emp_no"
+                ],
+                "sourceCardinality": "OneAndOnlyOneRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": ""
+              }
+            ],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "emp_no"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Default.dept_emp",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "emp_no",
+                "type": "NUMERIC",
+                "length": 5,
+                "decimals": -1,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "emp_no"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "depart_no",
+                "type": "CHARACTER",
+                "length": 5,
+                "decimals": -1,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "depart_no"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "department",
+                "fields": [
+                  "emp_no"
+                ],
+                "referencedSchema": "Default",
+                "referencedTable": "Default.employees",
+                "referencedFields": [
+                  "emp_no"
+                ],
+                "sourceCardinality": "OneAndOnlyOneRelationship",
+                "targetCardinality": "OneOrManyRelationship",
+                "comment": "",
+                "oldName": ""
+              },
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "departmentName",
+                "fields": [
+                  "depart_no"
+                ],
+                "referencedSchema": "Default",
+                "referencedTable": "Default.departments",
+                "referencedFields": [
+                  "depart_no"
+                ],
+                "sourceCardinality": "OneAndOnlyOneRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": ""
+              },
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "manager",
+                "fields": [
+                  "depart_no"
+                ],
+                "referencedSchema": "Default",
+                "referencedTable": "Default.depart_manager",
+                "referencedFields": [
+                  "depart_no"
+                ],
+                "sourceCardinality": "OneAndOnlyOneRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": ""
+              }
+            ],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "emp_no",
+                "depart_no"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Default.depart_manager",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "depart_no",
+                "type": "CHARACTER",
+                "length": 4,
+                "decimals": -1,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "depart_no"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "emp_no",
+                "type": "NUMERIC",
+                "length": 10,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "emp_no"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "managerName",
+                "fields": [
+                  "emp_no"
+                ],
+                "referencedSchema": "Default",
+                "referencedTable": "Default.employees",
+                "referencedFields": [
+                  "emp_no"
+                ],
+                "sourceCardinality": "OneAndOnlyOneRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": ""
+              }
+            ],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "depart_no",
+                "emp_no"
+              ],
+              "oldName": ""
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "diagrams": [
+    {
+      "name": "Diagram 1",
+      "paperWidth": 1,
+      "paperHeight": 1,
+      "tableFont": "Arial Unicode MS",
+      "tableFontSize": 14,
+      "isBalckWhite": false,
+      "showDBSchemaName": false,
+      "showViewRelations": true,
+      "notation": "default",
+      "showFieldComment": false,
+      "showTableComment": false,
+      "shapes": [
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Default.departments",
+          "x": 350,
+          "y": 60,
+          "width": 200,
+          "height": 101,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Default.dept_emp",
+          "x": 40,
+          "y": 60,
+          "width": 200,
+          "height": 99,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Default.depart_manager",
+          "x": 370,
+          "y": 260,
+          "width": 200,
+          "height": 109,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Default.employees",
+          "x": 40,
+          "y": 370,
+          "width": 200,
+          "height": 200,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Default.salaries",
+          "x": 50,
+          "y": 630,
+          "width": 200,
+          "height": 93,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Default.titles",
+          "x": 350,
+          "y": 410,
+          "width": 200,
+          "height": 90,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": ".full_view",
+          "x": 360,
+          "y": 630,
+          "width": 254,
+          "height": 142,
+          "isBold": false,
+          "titleColor": {
+            "r": 255,
+            "g": 119,
+            "b": 133,
+            "a": 1
+          }
+        }
+      ],
+      "layers": [],
+      "relations": [
+        {
+          "name": "department",
+          "sourceTableName": "Default.dept_emp",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 140,
+              "y": 174
+            },
+            {
+              "x": 140,
+              "y": 260
+            },
+            {
+              "x": 140,
+              "y": 260
+            },
+            {
+              "x": 140,
+              "y": 355
+            }
+          ],
+          "label": {
+            "x": 148,
+            "y": 164,
+            "width": 79,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "departmentName",
+          "sourceTableName": "Default.dept_emp",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 255,
+              "y": 110
+            },
+            {
+              "x": 321,
+              "y": 110
+            },
+            {
+              "x": 321,
+              "y": 110
+            },
+            {
+              "x": 335,
+              "y": 110
+            }
+          ],
+          "label": {
+            "x": 245,
+            "y": 71,
+            "width": 117,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "title",
+          "sourceTableName": "Default.employees",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 255,
+              "y": 470
+            },
+            {
+              "x": 420,
+              "y": 470
+            },
+            {
+              "x": 335,
+              "y": 470
+            }
+          ],
+          "label": {
+            "x": 245,
+            "y": 431,
+            "width": 50,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "Salary",
+          "sourceTableName": "Default.employees",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 150,
+              "y": 585
+            },
+            {
+              "x": 150,
+              "y": 700
+            },
+            {
+              "x": 150,
+              "y": 615
+            }
+          ],
+          "label": {
+            "x": 152,
+            "y": 534,
+            "width": 50,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "manager",
+          "sourceTableName": "Default.dept_emp",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 255,
+              "y": 120
+            },
+            {
+              "x": 320,
+              "y": 320
+            },
+            {
+              "x": 355,
+              "y": 320
+            }
+          ],
+          "label": {
+            "x": 245,
+            "y": 81,
+            "width": 64,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "managerName",
+          "sourceTableName": "Default.depart_manager",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 355,
+              "y": 330
+            },
+            {
+              "x": 300,
+              "y": 330
+            },
+            {
+              "x": 255,
+              "y": 410
+            }
+          ],
+          "label": {
+            "x": 264,
+            "y": 291,
+            "width": 101,
+            "height": 40,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        }
+      ],
+      "viewRelations": []
+    },
+    {
+      "name": "Diagram 2",
+      "paperWidth": 1,
+      "paperHeight": 1,
+      "tableFont": "Arial Unicode MS",
+      "tableFontSize": 14,
+      "isBalckWhite": false,
+      "showDBSchemaName": false,
+      "showViewRelations": true,
+      "notation": "default",
+      "showFieldComment": false,
+      "showTableComment": false,
+      "shapes": [],
+      "layers": [],
+      "relations": [],
+      "viewRelations": []
+    }
+  ]
+}
