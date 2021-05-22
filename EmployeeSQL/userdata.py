@@ -1,2 +1,2 @@
 POSTGRES_PORT = '5432' 
-USER = 'postgres:drwho@localhost'
+USER = 'postgres:PASSWORD@localhost'
